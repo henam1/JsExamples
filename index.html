@@ -33,35 +33,66 @@
     </head>
     
 <body>
+    <!--Horizontal navigation-->
+        <nav class ="navbar navbar-default navbar-static-top navtop" style="background-color: #e3f2fd;">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand">JavaScript Examples</a>
+                    
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                        
+                    <div class="collapse navbar-collapse navHeaderCollapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="basics.html">Basics</a></li>
+                            <li><a href="intermediate.html">Intermediate</a></li>
+                            <li><a href="advanced.html">Advanced</a></li>
+                        </ul>                               
+                    </div>
+            </div>
+        </nav>
+<!--Horizontal navigation--> 
+<!--Vertical navigation-->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+<!--Vertical navigation-->  
     
+<!--Wrapper-->    
     <div id="wrapper">
-
         <!--Header-->
         <header id="mainHeader">
             <a href="#">
-                <img id="websiteLogo" alt="JavaScript Logo" src="images/JavaScript_Logo.png"/>
+                
             </a>
-            <h1>JavaScript Examples</h1>
         </header>
-        
-        
-        <!-- Horizontal Navigation -->
-        <nav id="horzNav">
-            <p>
-                <a href="google.com">Google</a>
-                <a href="youtube.com">YouTube</a>
-                <a href="yahoo.com">Yahoo</a>
-            </p>
-        </nav>
-        
-        <!-- Vertical Navigation -->
-        <nav id="vertNav">
-            <p>
-                <a href="google.com">Google</a>
-                <a href="youtube.com">YouTube</a>
-                <a href="yahoo.com">Yahoo</a>
-            </p>        
-        </nav>
     
         <!-- Main content (examples) -->
         <main id="content">
