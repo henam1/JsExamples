@@ -158,6 +158,11 @@ nav#horzNav{
         position: relative;
         margin-right: 0;
     }
+    .row {
+        color:black;
+        text-align: justify;
+        text-overflow: ellipsis;
+    }
 }
 
 
