@@ -47,8 +47,9 @@
 	background: #ddd;
 	top: auto;
 	left: 0;
-	width: 100%;
+	width: 90%;
 	margin-top: 10px;
+	margin-left: 60px; /* margin-left add*/
 	text-align: left;
 	height: 0;
 	overflow: hidden;
