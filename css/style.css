@@ -30,6 +30,7 @@ header#mainHeader{
 /*--header--*/
 
 /* Navigation */
+
 nav#horzNav{
     
 }
@@ -54,7 +55,7 @@ nav#horzNav{
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
+    z-index: 100;
     position: fixed;
     left: 250px;
     width: 0;
@@ -161,6 +162,14 @@ nav#horzNav{
 
 
 /* Footer */
-footer#footer1{
-    
+footer#footer1 {
+    z-index: 1000;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 45px;
+    line-height: 45px; /* Vertically center the text there */
+    background-color: #f5f5f5;
 }
