@@ -89,9 +89,9 @@ nav#horzNav{
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 150px;
-    margin: 0;
-    padding: 0;
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
     list-style: none;
 }
 
