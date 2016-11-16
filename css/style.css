@@ -11,12 +11,13 @@ body{
 /* Wrapper and content */
 #wrapper{
 text-align:left;
-    
+
 	
 }
 
 #content{ 
-width: 800px;
+width: auto;
+    background-color: #f84d6f;
 
  
 }
@@ -67,6 +68,7 @@ nav#horzNav{
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    background-color: #b7e9fd;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -89,7 +91,7 @@ nav#horzNav{
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 200px;
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -142,7 +144,7 @@ nav#horzNav{
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 200px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -152,6 +154,7 @@ nav#horzNav{
     #page-content-wrapper {
         padding: 20px;
         position: relative;
+        background-color: rgba(245, 78, 114, 0.2);
     }
 
     #wrapper.toggled #page-content-wrapper {
