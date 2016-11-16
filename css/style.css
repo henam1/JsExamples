@@ -10,11 +10,15 @@ body{
 
 /* Wrapper and content */
 #wrapper{
+text-align:left;
     
+	
 }
 
 #content{ 
+width: 800px;
 
+ 
 }
 
 
