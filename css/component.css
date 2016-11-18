@@ -4,6 +4,7 @@
 	margin: 0 auto;
 	text-align: center;
 /* width for whole grid1*/
+	margin: auto;
 	width: auto;
 }
 
@@ -11,7 +12,6 @@
 	display: inline-block;
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
-	
 	/* height for whole grid*/
 	height: auto;
 }
@@ -19,7 +19,7 @@
 .og-grid li > a,
 .og-grid li > a img {
 	border: none;
-	outline: none;
+	
 	
 	/*Set widht and height of grid items */
 	height:200px;
@@ -47,7 +47,8 @@
 	background: #ddd;
 	top: auto;
 	left: 0;
-	width: 100%;
+	margin-left:100px;
+	width: 80%;
 	margin-top: 10px;
 	text-align: left;
 	height: 0;
@@ -99,10 +100,14 @@
 	height: 100%;
 	overflow: hidden;
 	position: relative;
+	
+	
 }
 
 .og-details {
 	padding: 0 40px 0 20px;
+	
+	
 }
 
 .og-fullimg {
@@ -117,9 +122,11 @@
 
 .og-details h3 {
 	font-weight: 300;
-	font-size: 52px;
-	padding: 40px 0 10px;
-	margin-bottom: 10px;
+	font-size: 32px;
+	
+	/* put title at top */
+	margin:0px;
+	padding:0px;
 }
 
 .og-details p {

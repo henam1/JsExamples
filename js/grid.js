@@ -341,11 +341,15 @@ var Grid = (function() {
 
 	Preview.prototype = {
 		create : function() {
-			// create Preview structure:
+			// create Preview structure
+			
+			//Here you can change whats in the box that pops up.
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+			
+			//removed this.$href fdom function below to remove the link.
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description);
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
