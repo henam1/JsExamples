@@ -4,9 +4,12 @@ html{
 }
 
 body{
-    
+    padding-bottom: 30px;
 }
 
+li{
+    list-style: none;
+}
 
 /* Wrapper and content */
 #wrapper{
@@ -89,7 +92,7 @@ nav#horzNav{
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 200px;
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -134,7 +137,7 @@ nav#horzNav{
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 200px;
     }
 
     #wrapper.toggled {
@@ -142,7 +145,7 @@ nav#horzNav{
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 200px;
     }
 
     #wrapper.toggled #sidebar-wrapper {

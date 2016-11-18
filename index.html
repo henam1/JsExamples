@@ -61,10 +61,11 @@
         </nav>
 <!--Horizontal navigation--> 
     <!--Vertical navigation-->
-        <div id="sidebar-wrapper">
-
-
-                         <ul class="sidebar-nav">
+    <div id="sidebar-wrapper">
+        <div class="container-fluid">
+             <div class="row">
+                 <div class="col-sm-3 col-md-2 sidebar">
+                     <ul class="nav nav-sidebar">
                               <li><a href="#">Introduction</a></li>
                               <li><a href="#">FAQ</a></li>
                               <li><a href="#">Overview</a></li>
@@ -72,13 +73,16 @@
                               <li><a href="#">About</a></li>
                               <li><a href="#">Services</a></li>
                               <li><a href="#">Contact</a></li>
-                         </ul>
-
-
+                     </ul>
+                </div>
+            </div>
         </div>
+    </div>
+
     <!--Vertical navigation-->
     
-<!--Wrapper-->    
+<!--Wrapper-->
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <div id="wrapper" >
         <!--Header-->
         <header id="mainHeader">
@@ -89,31 +93,44 @@
     </div>
     
         <!-- Main content (examples) -->
-        <main id="content" >
-	        <div class="container"; >
+        <main id="page-content-wrapper">
+	        <div class="container-fluid"; >
                 <div class="row";>
-                    <div class="col-lg-9 col-lg-offset-3";>
-                         <h3 style="text-overflow: ellipsis";> What is JavaScript and what can it be used for?</h3>
-                         <p>JavaScript is a cross-platform programming language that runs in a host environment like a Web browser.
+                    <div class="col-xs-10";>
+                       <li><h3 style="text-overflow: ellipsis";> What is JavaScript and what can it be used for?</h3></li>
+                         <li><p>JavaScript is a cross-platform programming language that runs in a host environment like a Web browser.
 			        The majority of websites use JavaScript and all Web browsers support JavaScript without any need of plug-ins.
 			        JavaScript is used to make a website interactive, one example are polls that can be found on many websites
-                         </p>
-                         <h3>Is JavaScript and Java the same thing?</h3>
-                         <p>Even though there are some similarities in syntax between JavaScript and Java they are fundamentally
+                         </p></li>
+
+                        <li><h3>Is JavaScript and Java the same thing?</h3></li>
+                        <li> <p>Even though there are some similarities in syntax between JavaScript and Java they are fundamentally
                         two different programming languages. JavaScript is in some ways a bit less structured programming
                         because it is not necessary to declare all variables, classes and methods. Also return types are not explicitly typed.
-                         </p>
-                         <h3>Do I need to know how to program JavaScript to be able to use it on my website?</h3>
-			             <p>No, you do not have to know how to program JavaScript to be able to use some cool scripts to use for your website.
+                         </p></li>
+
+                        <li> <h3>Do I need to know how to program JavaScript to be able to use it on my website?</h3></li>
+			            <li><p>No, you do not have to know how to program JavaScript to be able to use some cool scripts to use for your website.
                         On this page you will find some examples that you can use straight away and implement straight into your website.
-			             </p>
+			             </p></li>
+
+                        <li><h3>What is JavaScript? Is it the same as Java?</h3></li>
+                        <li>
+                            <p>JavaScript is NOT Java. JavaScript is a basic scripting language that allows Web authors to create dynamic pages that react to user interaction.</p>
+                            <p>JavaScript is based loosely on the Java programming language. JavaScript programs are contained within the HTML code of the Web page and are interpreted by the browser as it its read in contrast to Java programs that are downloaded separately from the HTML page. JavaScript is a "safe" programming language, one that cannot access any system controls or hardware on a user's computer.</p>
+                            <p>JavaScript provides greater flexibility to the Web designer through such luxuries as being able to create windows, display moving text, sound or other multimedia elements with relative ease. JavaScript often is used in place of common CGI operations, like verifying form input. It can also be used to control Java applets or plugins or open up new browser windows to aid in site navigation.</p>
+                            <p>JavaScript code can be inserted in &lt;SCRIPT&gt; tags within a page's HTML code, or embedded into a page to react to HTML "event handlers," such as a page loading, a button being clicked, or a window opening.</p>
+                            <p>JavaScript was first introduced in Netscape Navigator 2.0 and is supported in all subsequent versions of Netscape. Microsoft's JScript, their own version of JavaScript, inconsistently supports JavaScript (while causing errors the rest of the time) in Internet Explorer 3.0 and above. All modern browsers can interpret JavaScript (with a few irritating side-effects for older browsers).</p>
+                            <p>Overall, JavaScript is a fairly universal extension to HTML that can enhance the user experience through event handling and client-side execution, while extending a Web developer's control over the client's browser. How to do this is the subject of our site.</p>
+                        </li>
                     </div>
                 </div>
             </div>
         </main>
+        </div>
         <!-- Main content (examples) -->
 
-        
+
         <!-- Footer -->
         <footer id="footer1">
             <div class="container">
@@ -123,6 +140,6 @@
                 </span>
             </div>
         </footer>
-
+        <!-- Footer -->
     </body>
 </html>
