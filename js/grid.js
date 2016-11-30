@@ -347,11 +347,9 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-            this.$code = $( '<div style="color:red;">whatsup nigga</div>');
-            
 			
 			//removed this.$href fdom function below to remove the link.
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code);
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description);
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -388,13 +386,11 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' ),
-                    code : $itemEl.data( 'code' )
+					description : $itemEl.data( 'description' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-            this.$code.html ( eldata.code);
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
