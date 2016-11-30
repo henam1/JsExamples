@@ -347,7 +347,7 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$code = $('<p></p>');
+			this.$code = $('<div></div>');
 
 			//removed this.$href fdom function below to remove the link.
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code);
