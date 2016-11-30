@@ -347,9 +347,8 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-            this.$code = $( '<div style="color:red;">whatsup nigga</div>');
-            
-			
+			this.$code = $('<p></p>');
+
 			//removed this.$href fdom function below to remove the link.
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code);
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -389,12 +388,12 @@ var Grid = (function() {
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
-                    code : $itemEl.data( 'code' )
+					code : $itemEl.data('code')
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-            this.$code.html ( eldata.code);
+			this.$code.html(eldata.code);
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
