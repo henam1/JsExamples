@@ -107,11 +107,20 @@
 .og-details {
 	padding: 0 40px 0 20px;
 	
+	height:100%;
+	overflow:auto;
+
+	
 	
 }
 
 .og-fullimg {
 	text-align: center;
+	
+				/*Set height for image in grey box*/
+	height:0px; /*Removed the picture :)*/
+	
+	
 }
 
 .og-fullimg img {
@@ -139,8 +148,8 @@
     float:left;
 	background-color: white;
     width: 300px;
-	height: 100px;
-    margin: 5px;
+	height: 70%;
+    margin: 20px;
 	overflow:auto;
 	
 }
