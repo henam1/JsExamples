@@ -96,24 +96,43 @@
             <div class="row";>
                 <div class="col-md-11";>
                     <li><h3 style="text-overflow: ellipsis";> Array</h3></li>
-                    <li><p>JavaScript is a cross-platform programming language that runs in a host environment like a Web browser.
-                        The majority of websites use JavaScript and all Web browsers support JavaScript without any need of plug-ins.
-                        JavaScript is used to make a website interactive, one example are polls that can be found on many websites
+                    <li><p>JavaScript arrays work in the same ways as arrays do in other programming languages. Arrays are used to store
+					mutiple values in a single variable. An Array can look something like this.
+					<pre style='color:#000000;background:#ffffff;'><code><span style='color:#800000; font-weight:bold; '>var</span> guitars = ["Gibson", "Fender", "ESP"]; </code></pre>
                     </p></li>
 
-                    <li> <h3>Do I need to know how to program JavaScript to be able to use it on my website?</h3></li>
-                    <li><p>No, you do not have to know how to program JavaScript to be able to use some cool scripts to use for your website.
-                        On this page you will find some examples that you can use straight away and implement straight into your website.
+                    <li> <h3>How do I create an array?</h3></li>
+                    <li><p><pre style='color:#000000;background:#ffffff;'><code><span style='color:#800000; font-weight:bold; '>var</span> array-name = ["item1", "item2", "item3",.......]; </code></pre>
                     </p></li>
 
-                    <li><h3>What is JavaScript? Is it the same as Java?</h3></li>
+                    <li><p>Spaces and line breaks do not break the code. The decleration can span mutiple lines.
                     <li>
-                        <p>JavaScript is NOT Java. JavaScript is a basic scripting language that allows Web authors to create dynamic pages that react to user interaction.</p>
-                        <p>JavaScript is based loosely on the Java programming language. JavaScript programs are contained within the HTML code of the Web page and are interpreted by the browser as it its read in contrast to Java programs that are downloaded separately from the HTML page. JavaScript is a "safe" programming language, one that cannot access any system controls or hardware on a user's computer.</p>
-                        <p>JavaScript provides greater flexibility to the Web designer through such luxuries as being able to create windows, display moving text, sound or other multimedia elements with relative ease. JavaScript often is used in place of common CGI operations, like verifying form input. It can also be used to control Java applets or plugins or open up new browser windows to aid in site navigation.</p>
-                        <p>JavaScript code can be inserted in &lt;SCRIPT&gt; tags within a page's HTML code, or embedded into a page to react to HTML "event handlers," such as a page loading, a button being clicked, or a window opening.</p>
-                        <p>JavaScript was first introduced in Netscape Navigator 2.0 and is supported in all subsequent versions of Netscape. Microsoft's JScript, their own version of JavaScript, inconsistently supports JavaScript (while causing errors the rest of the time) in Internet Explorer 3.0 and above. All modern browsers can interpret JavaScript (with a few irritating side-effects for older browsers).</p>
-                        <p>Overall, JavaScript is a fairly universal extension to HTML that can enhance the user experience through event handling and client-side execution, while extending a Web developer's control over the client's browser. How to do this is the subject of our site.</p>
+                        <p><pre style='color:#000000;background:#ffffff;'><code><span style='color:#800000; font-weight:bold; '>var</span> guitars = [<br> "Gibson",<br> "Fender",<br> "ESP"<br>]; </code></pre></p>
+						
+                        <p>Do not put a comma after the last element
+					like this <pre style='color:#000000;background:#ffffff;'><code>"ESP",</code></pre><p></li></p>
+                        <h3>Accessing the elements of an Array</h3>
+						<p>Accessing the elements of an Array is an fundamental skill to learn when dealing with Arrays.<br>So how do I access the first element of my array?<br>
+						This statement accesses the first value of our array which is the element "Gibson"
+						  <p><pre style='color:#000000;background:#ffffff;'><code><span style='color:#800000; font-weight:bold; '>var</span> name = guitars[0]; </code></pre></p>
+						  <p>
+						  <p>This statement modifies the second element "Fender" to "Ibanez"</p>
+						  <pre style='color:#000000;background:#ffffff;' ><code>guitars[1]="Ibanez"; </code></pre></p>
+						  <h3>How do I access the full array?</h3>
+				
+						  <p>By simply refering to the variable name</p>
+						  <pre style='color:#000000;background:#ffffff;'><code><span style='color:#800000; font-weight:bold;'>var</span> guitars = ["Gibson","Fender","ESP"]<br>document.getElementById("demo").innerHTML = cars;</code></pre></p>
+						  <p id="demo">Click the button to retrieve the Array elements</p>
+						  
+						  <button onclick="myFunction()" style="float: left;" >Try it</button>
+
+<script>
+var guitars = ["Gibson","Fender","ESP"];
+function myFunction() {
+    document.getElementById("demo").innerHTML = guitars;
+}
+</script>
+						  
                     </li>
                 </div>
             </div>
