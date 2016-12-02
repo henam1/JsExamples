@@ -347,16 +347,15 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			
 			//added styles here for the different divs
-			this.$description = $( '<div style = "border: 1px solid green"></div>' );
+			this.$description = $('<p></p>');
 			this.$href = $( '<a href="#">Visit website</a>' );
 			this.$code = $('<div style = "border: 1px solid red"></div>' );
-			
-			//this.$code2 = $('<div class="og-details"></div>' );
-			this.$code2 = $('<div style = "border: 1px solid blue" ></div>' );	
+			this.$code2 = $('<div style = "border: 1px solid green" ></div>' );
+            this.$code3 = $('<div style = "border: 1px solid blue"></div>');
 			
 			
 			//removed this.$href fdom function below to remove the link.
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code2, this.$code);
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code, this.$code2, this.$code3);
 			
 			
 			
@@ -398,7 +397,8 @@ var Grid = (function() {
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
 					code : $itemEl.data('code'),
-						code2 : $itemEl.data('code2')
+				    code2 : $itemEl.data('code2'),
+                    code3 : $itemEl.data('code3')
 					
 				};
 
@@ -406,7 +406,8 @@ var Grid = (function() {
 			this.$description.html( eldata.description );
 			this.$code.html(eldata.code);
 			this.$code2.html(eldata.code2);
-			
+			this.$code3.html(eldata.code3);
+            
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
