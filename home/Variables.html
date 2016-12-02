@@ -62,7 +62,7 @@
         <li><a href="../index.html">Introduction</a></li>
         <li><a href="../home/FAQ.html">FAQ</a></li>
         <li><a href="../home/Variables.html">Variables</a></li>
-        <li><a href="../home/Methods.html">Math</a></li>
+        <li><a href="../home/Math.html">Math</a></li>
         <li><a href="../home/Conditionals%20and%20Loops.html">Conditionals and Loops</a></li>
         <li><a href="../home/Arrays.html">Arrays</a></li>
         <li><a href="../home/Functions.html">Functions</a></li>
@@ -95,25 +95,102 @@
             <div class="row";>
                 <div class="col-md-11";>
                     <li><h3 style="text-overflow: ellipsis";>Variables</h3></li>
-                    <li><p>JavaScript is a cross-platform programming language that runs in a host environment like a Web browser.
-                        The majority of websites use JavaScript and all Web browsers support JavaScript without any need of plug-ins.
-                        JavaScript is used to make a website interactive, one example are polls that can be found on many websites
+                    <li><p>In JavaScript, a variable contains a value, such as "hello" or 5. When you use the variable, you refer to the data it represents, for example NumberOfDaysLeft = EndDate – TodaysDate.
+                        You use variables to store, retrieve, and manipulate values that appear in your code. Try to give your variables meaningful names to make it easy for other people to understand what your code does.
                     </p></li>
 
-                    <li> <h3>Do I need to know how to program JavaScript to be able to use it on my website?</h3></li>
-                    <li><p>No, you do not have to know how to program JavaScript to be able to use some cool scripts to use for your website.
-                        On this page you will find some examples that you can use straight away and implement straight into your website.
-                    </p></li>
+                    <li> <h3>Declaring Variables</h3></li>
+                    <li><p>The first time a variable appears in your script is its declaration. The first mention of the variable sets it up in memory, so you can refer to it later on in your script. You should declare variables before using them. You do this using the <b>var</b> keyword.
+                    </p>
 
-                    <li><h3>What is JavaScript? Is it the same as Java?</h3></li>
-                    <li>
-                        <p>JavaScript is NOT Java. JavaScript is a basic scripting language that allows Web authors to create dynamic pages that react to user interaction.</p>
-                        <p>JavaScript is based loosely on the Java programming language. JavaScript programs are contained within the HTML code of the Web page and are interpreted by the browser as it its read in contrast to Java programs that are downloaded separately from the HTML page. JavaScript is a "safe" programming language, one that cannot access any system controls or hardware on a user's computer.</p>
-                        <p>JavaScript provides greater flexibility to the Web designer through such luxuries as being able to create windows, display moving text, sound or other multimedia elements with relative ease. JavaScript often is used in place of common CGI operations, like verifying form input. It can also be used to control Java applets or plugins or open up new browser windows to aid in site navigation.</p>
-                        <p>JavaScript code can be inserted in &lt;SCRIPT&gt; tags within a page's HTML code, or embedded into a page to react to HTML "event handlers," such as a page loading, a button being clicked, or a window opening.</p>
-                        <p>JavaScript was first introduced in Netscape Navigator 2.0 and is supported in all subsequent versions of Netscape. Microsoft's JScript, their own version of JavaScript, inconsistently supports JavaScript (while causing errors the rest of the time) in Internet Explorer 3.0 and above. All modern browsers can interpret JavaScript (with a few irritating side-effects for older browsers).</p>
-                        <p>Overall, JavaScript is a fairly universal extension to HTML that can enhance the user experience through event handling and client-side execution, while extending a Web developer's control over the client's browser. How to do this is the subject of our site.</p>
+
+ <pre style='color:#000000;background:#ffffff;'>
+ <span style='color:#696969; '>// A single declaration.</span>
+ <span style='color:#800000; font-weight:bold; '>var</span> count<span style='color:#800080; '>;</span>
+ <span style='color:#696969; '>// Multiple declarations with a single var keyword.</span>
+ <span style='color:#800000; font-weight:bold; '>var</span> count<span style='color:#808030; '>,</span> amount<span style='color:#808030; '>,</span> level<span style='color:#800080; '>;</span>
+ <span style='color:#696969; '>// Variable declaration and initialization in one statement.</span>
+ <span style='color:#800000; font-weight:bold; '>var</span> count <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> amount <span style='color:#808030; '>=</span> <span style='color:#008c00; '>100</span><span style='color:#800080; '>;</span>
+ </pre>
+                    <p>If you do not initialize your variable in the var statement, it automatically takes on the value undefined.</p>
                     </li>
+
+                    <li><h3>Naming Variables</h3></li>
+
+                    <li><p>JavaScript is a case-sensitive language. This means that a variable name such as myCounter is different from the variable name MYCounter. Variable names can be of any length. The rules for creating legal variable names are as follows:</p></li>
+                    <li>
+                        <ul>
+                            <li style="list-style: decimal">The first character must be an ASCII letter (either uppercase or lowercase), or an underscore (_) character. Note that a number cannot be used as the first character.</li>
+                            <li style="list-style: decimal">Subsequent characters must be letters, numbers, or underscores (_).</li>
+                            <li style="list-style: decimal">The variable name must not be a reserved word.</li>
+                        </ul>
+                    </li>
+                    <li><p>Here are some examples of valid variable names:</p></li>
+<li>
+<pre style='color:#000000;background:#ffffff;'>_pagecount
+Part9
+Number_Items <span style='color:#800080; '>;</span>
+</pre>
+</li>
+                   <li><p>Here are some examples of invalid variable names:</p></li>
+<li>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// Cannot begin with a number. </span>
+99Balloons
+<span style='color:#696969; '>// The ampersand (&amp;) character is not a valid character for variable names. </span>
+Alpha<span style='color:#808030; '>&amp;</span>Beta
+</pre>
+</li>
+                    <li><p>When you want to declare a variable and initialize it, but do not want to give it any particular value, assign it the value null. Here is an example.</p></li>
+<li>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>var</span> bestAge <span style='color:#808030; '>=</span> <span style='color:#0f4d75; '>null</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>var</span> muchTooOld <span style='color:#808030; '>=</span> <span style='color:#008c00; '>3</span> <span style='color:#808030; '>*</span> bestAge<span style='color:#800080; '>;</span> <span style='color:#696969; '>// muchTooOld has the value 0.</span>
+</pre>
+</li>
+                   <li><p>If you declare a variable without assigning a value to it, it has the value undefined. Here is an example.</p></li>
+
+<li>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>var</span> currentCount<span style='color:#800080; '>;</span>
+<span style='color:#696969; '>// finalCount has the value NaN because currentCount is undefined.</span>
+<span style='color:#800000; font-weight:bold; '>var</span> finalCount <span style='color:#808030; '>=</span> <span style='color:#008c00; '>1</span> <span style='color:#808030; '>*</span> currentCount<span style='color:#800080; '>;</span>
+</pre>
+</li>
+                    <li><p>The null value behaves like the number 0, while undefined behaves like the special value NaN (Not a Number). If you compare a null value and an undefined value, they are equal.</p></li>
+                   <li> <p>You can declare a variable without using the var keyword in the declaration, and assign a value to it. This is an implicit declaration.</p></li>
+<li>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// The variable noStringAtAll is declared implicitly.</span>
+noStringAtAll <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+</pre>
+    </li>
+                    <li><p>You cannot use a variable that has never been declared.</p></li>
+<li>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// Error. Length and width do not yet exist.</span>
+<span style='color:#800000; font-weight:bold; '>var</span> area <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>length</span> <span style='color:#808030; '>*</span> width<span style='color:#800080; '>;</span>
+</pre>
+</li>
+                    <li><h3>Coercion</h3></li>
+                    <li><p>JavaScript is a loosely typed language, as opposed to strongly typed languages like C++. This means that JavaScript variables have no predetermined type. Instead, the type of a variable is the type of its value. This behavior allows you to treat a value as if it were of a different type.</p></li>
+                    <li><p>In JavaScript, you can perform operations on values of different types without causing an exception. The JavaScript interpreter implicitly converts, or coerces, one of the data types to that of the other, then performs the operation. The rules for coercion of string, number, and Boolean values are the following:</p></li>
+                    <li>
+                        <ul>
+                            <li style="list-style: decimal">If you add a number and a string, the number is coerced to a string.</li>
+                            <li style="list-style: decimal">If you add a Boolean and a string, the Boolean is coerced to a string.</li>
+                            <li style="list-style: decimal">If you add a number and a Boolean, the Boolean is coerced to a number.</li>
+                        </ul>
+                    </li>
+                    <li><p>In the following example, a number added to a string results in a string.</p></li>
+                    <li>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>var</span> x <span style='color:#808030; '>=</span> <span style='color:#008c00; '>2000</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>var</span> y <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Hello</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+<span style='color:#696969; '>// The number is coerced to a string.</span>
+x <span style='color:#808030; '>=</span> x <span style='color:#808030; '>+</span> y<span style='color:#800080; '>;</span>
+document<span style='color:#808030; '>.</span>write<span style='color:#808030; '>(</span>x<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// Output:</span>
+<span style='color:#696969; '>// 2000Hello</span>
+</pre>
+                    </li>
+                    <li><p>Strings are automatically converted to equivalent numbers for comparison purposes. To explicitly convert a string to an integer, use the parseInt function. To explicitly convert a string to a number, use the parseFloat function.</p></li>
+
                 </div>
             </div>
         </div>
