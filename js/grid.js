@@ -347,12 +347,12 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			
 			//added styles here for the different divs
-			this.$description = $( '<div style = "border: 5px solid green"></div>' );
+			this.$description = $( '<div style = "border: 1px solid green"></div>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$code = $('<div style = "border: 5px solid red"></div>' );
+			this.$code = $('<div style = "border: 1px solid red"></div>' );
 			
 			//this.$code2 = $('<div class="og-details"></div>' );
-			this.$code2 = $('<div style = "border: 5px solid blue" ></div>' );	
+			this.$code2 = $('<div style = "border: 1px solid blue" ></div>' );	
 			
 			
 			//removed this.$href fdom function below to remove the link.
