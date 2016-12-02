@@ -352,15 +352,16 @@ var Grid = (function() {
 			this.$code = $('<div style = "border: 1px solid red"></div>' );
 			this.$code2 = $('<div style = "border: 1px solid green" ></div>' );
             this.$code3 = $('<div style = "border: 1px solid blue"></div>');
+            this.$button = $('<a href="demo.html"><button type="button" class="btn btn-primary">Demo</button></a>');
 			
 			
 			//removed this.$href fdom function below to remove the link.
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code, this.$code2, this.$code3);
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code, this.$code2, this.$code3, this.$button);
 			
 			
 			
-			this.$loading = $( /*'<div class="og-loading"></div>'*/ );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ); //.append( this.$loading );
+			this.$loading = $( '<div class="og-loading"></div>' );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
@@ -398,7 +399,8 @@ var Grid = (function() {
 					description : $itemEl.data( 'description' ),
 					code : $itemEl.data('code'),
 				    code2 : $itemEl.data('code2'),
-                    code3 : $itemEl.data('code3')
+                    code3 : $itemEl.data('code3'),
+                    button : $itemEl.attr('href')
 					
 				};
 
@@ -407,6 +409,7 @@ var Grid = (function() {
 			this.$code.html(eldata.code);
 			this.$code2.html(eldata.code2);
 			this.$code3.html(eldata.code3);
+            this.$button.attr('href', eldata.button);
             
 			this.$href.attr( 'href', eldata.href );
 
