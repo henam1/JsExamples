@@ -96,11 +96,11 @@
 
 .og-fullimg,
 .og-details {
-/* overflow auto gives scroll to div*/	
-	overflow: auto;
+	overflow: auto; /*Scroll to divs*/
 	width: 100%;
 	float: top;  			/*changed here from left to top Dec 1st */
 	height: 50%;			/*change from 100% to 50%*/
+	overflow: hidden;
 	position: relative;
 }
 
