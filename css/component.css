@@ -100,7 +100,6 @@
 	width: 100%;
 	float: top;  			/*changed here from left to top Dec 1st */
 	height: 50%;			/*change from 100% to 50%*/
-	overflow: hidden;
 	position: relative;
 }
 
@@ -144,14 +143,12 @@
 
 
 .og-details div {
-   
     float:left;
-	background-color: white;
-    width: 300px;
+	background-color: #fefefe;
+    width: 29%;
 	height: 70%;
     margin: 20px;
 	overflow:auto;
-	
 }
 
 

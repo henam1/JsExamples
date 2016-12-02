@@ -352,7 +352,7 @@ var Grid = (function() {
 			this.$code = $('<div style = "border: 1px solid red"></div>' );
 			this.$code2 = $('<div style = "border: 1px solid green" ></div>' );
             this.$code3 = $('<div style = "border: 1px solid blue"></div>');
-            this.$button = $('<a href="demo.html"><button type="button" class="btn btn-primary">Demo</button></a>');
+            this.$button = $('<a href="demo.html" class="btn btn-info" role="button">Demo</a>');
 			
 			
 			//removed this.$href fdom function below to remove the link.

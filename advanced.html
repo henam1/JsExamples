@@ -380,6 +380,7 @@
                         var image = document.getElementById("click3");
                         break;
                     default:
+                        throw new RuntimeException("unreachable");
                 }
 
                 // Get the <span> element that closes the modal
