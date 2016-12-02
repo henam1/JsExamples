@@ -21,7 +21,7 @@
 	border: none;
 	
 	
-	/*Set widht and height of grid items */
+	/*Set width and height of grid items */
 	height:200px;
 	width:200px;
 	display: block;
@@ -96,9 +96,9 @@
 
 .og-fullimg,
 .og-details {
-	width: 50%;
-	float: left;
-	height: 100%;
+	width: 100%;
+	float: top;  			/*changed here from left to top Dec 1st */
+	height: 50%;			/*change from 100% to 50%*/
 	overflow: hidden;
 	position: relative;
 	
@@ -118,14 +118,15 @@
 .og-fullimg img {
 	display: inline-block;
 	max-height: 100%;
-	max-width: 100%;
+	max-width: 100%;     /*make it from 100% to 50%*/
+
 }
 
 .og-details h3 {
 	font-weight: 300;
 	font-size: 32px;
 	
-	/* put title at top */
+	/* put title at top*/
 	margin:0px;
 	padding:0px;
 }
