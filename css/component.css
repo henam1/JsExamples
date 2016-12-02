@@ -96,10 +96,21 @@
 
 .og-fullimg,
 .og-details {
+<<<<<<< HEAD
+
+/* set position of divs */
+	width: 1000px;
+	
+/* overflow auto gives scroll to div*/	
+	
+	height: 200px;
+	overflow: ato;
+=======
 	width: 100%;
 	float: top;  			/*changed here from left to top Dec 1st */
 	height: 50%;			/*change from 100% to 50%*/
 	overflow: hidden;
+>>>>>>> refs/remotes/origin/master
 	position: relative;
 	
 	
@@ -131,12 +142,21 @@
 	padding:0px;
 }
 
-.og-details p {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 22px;
-	color: #999;
+
+
+
+
+.og-details div {
+   
+    float:left;
+	background-color: white;
+    width: 300px;
+	height: 100px;
+    margin: 5px;
+	overflow:auto;
+	
 }
+
 
 .og-details a {
 	font-weight: 700;
@@ -208,4 +228,6 @@
 	.og-fullimg { display: none; }
 	.og-details { float: none; width: 100%; }
 	
+}
+}
 }

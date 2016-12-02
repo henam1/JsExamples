@@ -345,14 +345,23 @@ var Grid = (function() {
 			
 			//Here you can change whats in the box that pops up.
 			this.$title = $( '<h3></h3>' );
-			this.$description = $( '<p></p>' );
+			
+			//added styles here for the different divs
+			this.$description = $( '<div style = "border: 5px solid green"></div>' );
 			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$code = $('<div></div>');
-
+			this.$code = $('<div style = "border: 5px solid red"></div>' );
+			
+			//this.$code2 = $('<div class="og-details"></div>' );
+			this.$code2 = $('<div style = "border: 5px solid blue" ></div>' );	
+			
+			
 			//removed this.$href fdom function below to remove the link.
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code);
-			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code2, this.$code);
+			
+			
+			
+			this.$loading = $( /*'<div class="og-loading"></div>'*/ );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ); //.append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
@@ -388,12 +397,16 @@ var Grid = (function() {
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
-					code : $itemEl.data('code')
+					code : $itemEl.data('code'),
+						code2 : $itemEl.data('code2')
+					
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$code.html(eldata.code);
+			this.$code2.html(eldata.code2);
+			
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
