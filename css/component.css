@@ -44,7 +44,10 @@
 
 .og-expander {
 	position: absolute;
-	background: #ddd;
+	background: #dfdfdf;
+	
+	border: 3px solid #f9f9f9 ;
+	   border-radius: 8px;
 	top: auto;
 	left: 0;
 	/*margin-left:100px;*/
@@ -144,10 +147,13 @@
 
 .og-details div {
     float:left;
-	background-color: #fefefe;
-    width: 29%;
-	height: 70%;
-    margin: 20px;
+	background-color: white;
+		border: 3px solid #f9f9f9 ;
+	   border-radius: 8px;
+    width: 90%;
+	height: 130px;
+    margin: 10px;
+	
 	overflow:auto;
 }
 

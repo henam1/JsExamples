@@ -191,7 +191,7 @@ var Grid = (function() {
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
-			minHeight : 500,
+			minHeight : 700,
 			speed : 350,
 			easing : 'ease'
 		};
@@ -349,14 +349,15 @@ var Grid = (function() {
 			//added styles here for the different divs
 			this.$description = $('<p></p>');
 			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$code = $('<div style = "border: 1px solid red"></div>' );
-			this.$code2 = $('<div style = "border: 1px solid green" ></div>' );
-            this.$code3 = $('<div style = "border: 1px solid blue"></div>');
+			this.$code = $('<div></div>' );
+			this.$code2 = $('<div></div>' );
+			
+            this.$code3 = $('<div></div>');
             this.$button = $('<a href="demo.html" class="btn btn-info" role="button">Demo</a>');
 			
 			
 			//removed this.$href fdom function below to remove the link.
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$code, this.$code2, this.$code3, this.$button);
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title,this.$description,this.$code,this.$code2, this.$code3, this.$button);
 			
 			
 			
