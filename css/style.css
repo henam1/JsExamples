@@ -5,16 +5,42 @@ html{
 
 body{
     padding-bottom: 40px;
+    overflow-x: hidden;
 }
 
 li{
     list-style: none;
 }
 
+.list-conditional{
+    list-style: decimal;
+}
+table {
+    display: table;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+/* table */
+
+table th{
+    padding: 10px;
+    background-color: rgba(237, 237, 237, 1);
+    border: 1px solid #ccc;
+}
+
+
+table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+
 /* Wrapper and content */
 #wrapper{
 text-align:left;
-    
 	
 }
 
@@ -39,9 +65,9 @@ nav#horzNav{
 }
 
 /* Vertical Navigation */
- body {
-    overflow-x: hidden;
- }
+
+
+
 
 /* Toggle Styles */
 
