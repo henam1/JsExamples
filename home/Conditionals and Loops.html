@@ -96,24 +96,205 @@
             <div class="row";>
                 <div class="col-md-11";>
                     <li><h3 style="text-overflow: ellipsis";>Conditionals and Loops</h3></li>
-                    <li><p>JavaScript is a cross-platform programming language that runs in a host environment like a Web browser.
-                        The majority of websites use JavaScript and all Web browsers support JavaScript without any need of plug-ins.
-                        JavaScript is used to make a website interactive, one example are polls that can be found on many websites
-                    </p></li>
 
-                    <li> <h3>Do I need to know how to program JavaScript to be able to use it on my website?</h3></li>
-                    <li><p>No, you do not have to know how to program JavaScript to be able to use some cool scripts to use for your website.
-                        On this page you will find some examples that you can use straight away and implement straight into your website.
-                    </p></li>
+                        <p>Normally, statements in a JavaScript script are executed one after the other, in the order in which they are written. This is called sequential execution, and is the default direction of program flow.</p>
+                        <p>An alternative to sequential execution transfers the program flow to another part of your script. That is, instead of executing the next statement in the sequence, another statement is executed instead.</p>
+                        <p>To make a script useful, this transfer of control must be done in a logical manner. Transfer of program control is based upon a decision, the result of which is a truth statement (returning a Boolean true or false). You create an expression, then test whether its result is true. There are two main kinds of program structures that accomplish this.</p>
+                        <p>The first is the selection structure. You use it to specify alternate courses of program flow, creating a junction in your program (like a fork in a road). There are four selection structures available in JavaScript.</p>
 
-                    <li><h3>What is JavaScript? Is it the same as Java?</h3></li>
+
+                        <ul>
+                            <li style="list-style: decimal">the single-selection structure (<b>if</b>),</li>
+                            <li style="list-style: decimal">the double-selection structure (<b>if/else</b>),</li>
+                            <li style="list-style: decimal">the inline ternary operator (<b>?:</b>),</li>
+                            <li style="list-style: decimal">the multiple-selection structure (<b>switch</b>).</li>
+                        </ul>
+
+
+                        <p>The second type of program control structure is the repetition structure. You use it to specify that an action is to be repeated while some condition remains true. When the conditions of the control statement have been met (usually after some specific number of iterations), control passes to the next statement beyond the repetition structure. There are four repetition structures available in JavaScript.</p>
+
+
+                        <ul>
+                            <li style="list-style: decimal">the expression is tested at the top of the loop (<b>while</b>),</li>
+                            <li style="list-style: decimal">the expression is tested at the bottom of the loop (<b>do/while</b>),</li>
+                            <li style="list-style: decimal">operate on each of an object's properties (<b>for/in</b>),</li>
+                            <li style="list-style: decimal">counter controlled repetition (<b>for</b>).</li>
+                        </ul>
+
+                        <p>You can create quite complex scripts by nesting and stacking selection and repetition control structures.</p>
+                        <p>A third form of structured program flow is provided by exception handling, which is not covered in this document.</p>
+
+                    <li><h3 style="text-overflow: ellipsis";>Using Conditional Statements</h3>
+
+                        <p>JavaScript supports <b>if</b> and <b>if...else</b> conditional statements. In <b>if</b> statements a condition is tested, and if the condition meets the test, the relevant JavaScript code is executed. In the <b>if...else</b> statement, different code is executed if the condition fails the test. The simplest form of an <b>if</b> statement can be written on one line, but multiline <b>if</b> and <b>if...else</b> statements are much more common.</p>
+
+
+                        <p>
+                            The following examples demonstrate syntaxes you can use with <b>if</b> and <b>if...else</b> statements. The first example shows the simplest kind of Boolean test. If (and only if) the item between the parentheses evaluates to (or can be coerced to) <b>true</b>, the statement or block of statements after the <b>if</b> is executed.
+                        </p>
+
+                    <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>function</span> GetReaction<span style='color:#808030; '>(</span>newShip<span style='color:#808030; '>,</span> color<span style='color:#808030; '>,</span> texture<span style='color:#808030; '>,</span> dayOfWeek<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+   <span style='color:#696969; '>// The test succeeds if the newShip Boolean value is true.</span>
+   <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>newShip<span style='color:#808030; '>)</span>
+   <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Champagne Bottle</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+   <span style='color:#800080; '>}</span>
+
+   <span style='color:#696969; '>// The test succeeds if both conditions are true.</span>
+   <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>color <span style='color:#808030; '>==</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>deep yellow</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>&amp;&amp;</span> texture <span style='color:#808030; '>==</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>large and small wrinkles</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span>
+   <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Is it a crenshaw melon?</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+   <span style='color:#800080; '>}</span>
+
+   <span style='color:#696969; '>// The test succeeds if either condition is true.</span>
+   <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>dayOfWeek <span style='color:#808030; '>==</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Saturday</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>||</span> <span style='color:#808030; '>(</span>dayOfWeek <span style='color:#808030; '>==</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Sunday</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+   <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>I'm off to the beach!</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+   <span style='color:#800080; '>}</span>
+   <span style='color:#800000; font-weight:bold; '>else</span>
+   <span style='color:#800080; '>{</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>I'm going to work.</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+   <span style='color:#800080; '>}</span>
+<span style='color:#800080; '>}</span>
+
+<span style='color:#800000; font-weight:bold; '>var</span> reaction <span style='color:#808030; '>=</span> GetReaction<span style='color:#808030; '>(</span><span style='color:#0f4d75; '>false</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>deep yellow</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>smooth</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Sunday</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+document<span style='color:#808030; '>.</span>write<span style='color:#808030; '>(</span>reaction<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// Output: I'm off to the beach!</span>
+</pre></li>
                     <li>
-                        <p>JavaScript is NOT Java. JavaScript is a basic scripting language that allows Web authors to create dynamic pages that react to user interaction.</p>
-                        <p>JavaScript is based loosely on the Java programming language. JavaScript programs are contained within the HTML code of the Web page and are interpreted by the browser as it its read in contrast to Java programs that are downloaded separately from the HTML page. JavaScript is a "safe" programming language, one that cannot access any system controls or hardware on a user's computer.</p>
-                        <p>JavaScript provides greater flexibility to the Web designer through such luxuries as being able to create windows, display moving text, sound or other multimedia elements with relative ease. JavaScript often is used in place of common CGI operations, like verifying form input. It can also be used to control Java applets or plugins or open up new browser windows to aid in site navigation.</p>
-                        <p>JavaScript code can be inserted in &lt;SCRIPT&gt; tags within a page's HTML code, or embedded into a page to react to HTML "event handlers," such as a page loading, a button being clicked, or a window opening.</p>
-                        <p>JavaScript was first introduced in Netscape Navigator 2.0 and is supported in all subsequent versions of Netscape. Microsoft's JScript, their own version of JavaScript, inconsistently supports JavaScript (while causing errors the rest of the time) in Internet Explorer 3.0 and above. All modern browsers can interpret JavaScript (with a few irritating side-effects for older browsers).</p>
-                        <p>Overall, JavaScript is a fairly universal extension to HTML that can enhance the user experience through event handling and client-side execution, while extending a Web developer's control over the client's browser. How to do this is the subject of our site.</p>
+                        <h3 style="text-overflow: ellipsis";>Conditional Operator</h3>
+                        <p>
+                            JavaScript also supports an implicit conditional form. It uses a question mark after the condition to be tested (rather than the word if before the condition). It also specifies two alternatives, one to be used if the condition is met and one if it is not. A colon must separate these alternatives.
+                        </p>
+                        <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>var</span> AMorPM <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span>theHour <span style='color:#808030; '>>=</span> <span style='color:#008c00; '>12</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>?</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>PM</span><span style='color:#800000; '>"</span> <span style='color:#800080; '>:</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>AM</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+                        </pre>
+                        <p>If you have several conditions to be tested together, and you know that one is more likely to pass or fail than the others, you can use a feature called 'short circuit evaluation' to speed the execution of your script. When JavaScript evaluates a logical expression, it only evaluates as many sub-expressions as required to get a result.</p>
+                        <p>For example, if you have an AND expression such as ((x == 123) && (y == 6)), JavaScript first checks if x is 123. If it is not, the entire expression cannot be true, even if y is equal to 6. Hence, the test for y is never made, and JavaScript returns the value <b>false</b>.</p>
+                        <p>Similarly, if only one of several conditions must be <b>true</b> (using the || operator), testing stops as soon as any one condition passes the test. This is effective if the conditions to be tested involve the execution of function calls or other complex expressions. With this in mind, when you write Or expressions, place the conditions most likely to be true first. When you write And expressions, place the conditions most likely to be <b>false first</b>.</p>
+                        <p>A benefit of designing your script in this manner is that <b>runsecond()</b> will not be executed in the following example if <b>runfirst()</b> returns 0.</p>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>runfirst<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>==</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>||</span> <span style='color:#808030; '>(</span>runsecond<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>==</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+    <span style='color:#696969; '>// some code</span>
+<span style='color:#800080; '>}</span></pre>
+                    </li>
+                    <li>
+                        <h3 style="text-overflow: ellipsis";>Using Loops</h3>
+                        <p>There are several ways to execute a statement or block of statements repeatedly. In general, repetitive execution is called <em>looping</em> or <em>iteration</em>. An iteration is simply a single execution of a loop. It is typically controlled by a test of a variable, where the value of which is changed each time the loop is executed. JavaScript supports four types of loops: <b>for</b> loops, <b>for...in</b> loops, <b>while</b> loops, <b>do...while</b> loops.</p>
+                    </li>
+                    <li>
+                        <h3 style="text-overflow: ellipsis";>Using for Loops</h3>
+                        <p>The <b>for</b> statement specifies a counter variable, a test condition, and an action that updates the counter. Before each iteration of the loop, the condition is tested. If the test is successful, the code inside the loop is executed. If the test is unsuccessful, the code inside the loop is not executed, and the program continues on the first line of code immediately following the loop. After the loop is executed, the counter variable is updated before the next iteration begins.</p>
+                        <p>If the condition for looping is never met, the loop is never executed. If the test condition is always met, an infinite loop results. While the former may be desirable in certain cases, the latter rarely is, so be cautious when writing your loop conditions.</p>
+                        <pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// The update expression ("icount++" in the following examples)</span>
+<span style='color:#696969; '>// is executed at the end of the loop, after the block of</span>
+<span style='color:#696969; '>// statements that forms the body of the loop is executed, and</span>
+<span style='color:#696969; '>// before the condition is tested.</span>
+
+<span style='color:#696969; '>// Set a limit of 10 on the loop.</span>
+<span style='color:#800000; font-weight:bold; '>var</span> howFar <span style='color:#808030; '>=</span> <span style='color:#008c00; '>10</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// Create an array called sum with 10 members, 0 through 9.</span>
+<span style='color:#800000; font-weight:bold; '>var</span> sum <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> <span style='color:#797997; '>Array</span><span style='color:#808030; '>(</span>howFar<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+sum<span style='color:#808030; '>[</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// Iterate from 0 through 9.</span>
+<span style='color:#800000; font-weight:bold; '>var</span> theSum <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>for</span><span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>var</span> icount <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> icount <span style='color:#808030; '>&lt;</span> howFar<span style='color:#800080; '>;</span> icount<span style='color:#808030; '>++</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+   theSum <span style='color:#808030; '>+=</span> icount<span style='color:#800080; '>;</span>
+   sum<span style='color:#808030; '>[</span>icount<span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> theSum<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>// This code is not executed at all, because icount is not greater than howFar.</span>
+<span style='color:#800000; font-weight:bold; '>var</span> newSum <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>for</span><span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>var</span> icount <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> icount <span style='color:#808030; '>></span> howFar<span style='color:#800080; '>;</span> icount<span style='color:#808030; '>++</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+   newSum <span style='color:#808030; '>+=</span> icount<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>// This is an infinite loop.</span>
+<span style='color:#800000; font-weight:bold; '>var</span> sum <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>for</span><span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>var</span> icount <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> icount <span style='color:#808030; '>>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> icount<span style='color:#808030; '>++</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+   sum <span style='color:#808030; '>+=</span> icount<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+                    </li>
+                    <li>
+                        <h3 style="text-overflow: ellipsis";>Using for...in Loops</h3>
+                        <p>JavaScript provides a special kind of loop for stepping through all the user-defined properties of an object, or all the elements of an array. The loop counter in a for...in loop is a string, not a number. It contains the name of current property or the index of the current array element.</p>
+                        <pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// Create an object with some properties</span>
+<span style='color:#800000; font-weight:bold; '>var</span> myObject <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> <span style='color:#797997; '>Object</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+myObject<span style='color:#808030; '>.</span>name <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>James</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+myObject<span style='color:#808030; '>.</span>age <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>22</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+myObject<span style='color:#808030; '>.</span>phone <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>555 1234</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// Enumerate (loop through)_all the properties in the object</span>
+<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>var</span> prop <span style='color:#800000; font-weight:bold; '>in</span> myObject<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+    <span style='color:#696969; '>// This displays "The property 'name' is James", etc.</span>
+    document<span style='color:#808030; '>.</span>write<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>The property '</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>+</span> prop <span style='color:#808030; '>+</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>' is </span><span style='color:#800000; '>"</span> <span style='color:#808030; '>+</span> myObject<span style='color:#808030; '>[</span>prop<span style='color:#808030; '>]</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+    <span style='color:#696969; '>// New line.</span>
+    document<span style='color:#808030; '>.</span>write<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>&lt;br /></span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+                        <p>Although <b>for...in</b> loops look similar to VBScript's <b>For Each...Next</b> loops, they do not work the same way. The JavaScript <b>for...in loop</b> iterates over properties of JavaScript objects. The VBScript <b>For Each...Next</b> loop iterates over items in a collection. To loop over collections in JavaScript, you need to use the Enumerator Object (JavaScript) object or, if present, the <b>forEach</b> method of the collection object. Although some objects, such as those in Internet Explorer, support both the VBScript <b>For Each...Next</b> loop and the JavaScript <b>for...in</b> loop, most objects do not.</p>
+                    </li>
+                    <li><h3 style="text-overflow: ellipsis";>Using while Loops</h3>
+                        <p>A <b>while</b> loop is similar to a <b>for</b> loop. The difference is, a <b>while</b> loop does not have a built-in counter variable or update expression. If you want to control repetitive execution of a statement or block of statements, but need a more complex rule than simply "run this code n times", use a <b>while</b> loop. The following example uses the Internet Explorer object model and a <b>while</b> loop to ask the user a simple question.</p>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>var</span> x <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>x <span style='color:#808030; '>!=</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;&amp;</span> <span style='color:#808030; '>(</span>x <span style='color:#808030; '>!=</span> <span style='color:#0f4d75; '>null</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+    x <span style='color:#808030; '>=</span> window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>prompt</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>What is my favorite number?</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> x<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+
+<span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>x <span style='color:#808030; '>==</span> <span style='color:#0f4d75; '>null</span><span style='color:#808030; '>)</span>
+    window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>alert</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>You gave up!</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>else</span>
+    window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>alert</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Correct answer!</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+</pre>
+                        <p>As noted above, there is also a <b>do...while</b> loop in JavaScript that is similar to the while loop, except that it is guaranteed to always execute at least once, since the condition is tested at the end of the loop, rather than at the start. For example, the loop above can be re-written as:</p>
+                   <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>var</span> x <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>do</span>
+<span style='color:#800080; '>{</span>
+    x <span style='color:#808030; '>=</span> window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>prompt</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>What is my favorite number?</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> x<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span> <span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>x <span style='color:#808030; '>!=</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;&amp;</span> <span style='color:#808030; '>(</span>x <span style='color:#808030; '>!=</span> <span style='color:#0f4d75; '>null</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>x <span style='color:#808030; '>==</span> <span style='color:#0f4d75; '>null</span><span style='color:#808030; '>)</span>
+    window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>alert</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>You gave up!</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>else</span>
+    window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>alert</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Correct answer!</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+</pre>
+                    </li>
+                    <li>
+                        <h3 style="text-overflow: ellipsis";>Using break and continue Statements</h3>
+                        <p>In JavaScript, the <b>break</b> statement is used to stop the execution of a loop, if some condition is met. (Note that <b>break</b> is also used to exit a <b>switch</b> block). The <b>continue</b> statement can be used to jump immediately to the next iteration, skipping the rest of the code block, while updating the counter variable if the loop is a <b>for</b> or <b>for...in loop</b>.</p>
+                        <p>The following example builds on the previous example to use the <b>break</b> and <b>continue</b> statements to control the loop.</p>
+                    <pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>var</span> x <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>do</span>
+<span style='color:#800080; '>{</span>
+    x <span style='color:#808030; '>=</span> window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>prompt</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>What is my favorite number?</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> x<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+    <span style='color:#696969; '>// Did the user cancel? If so, break out of the loop</span>
+    <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>x <span style='color:#808030; '>==</span> <span style='color:#0f4d75; '>null</span><span style='color:#808030; '>)</span>
+        <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+
+    <span style='color:#696969; '>// Did they enter a number?</span>
+    <span style='color:#696969; '>// If so, no need to ask them to enter a number.</span>
+    <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span><span style='color:#797997; '>Number</span><span style='color:#808030; '>(</span>x<span style='color:#808030; '>)</span> <span style='color:#808030; '>==</span> x<span style='color:#808030; '>)</span>
+        <span style='color:#800000; font-weight:bold; '>continue</span><span style='color:#800080; '>;</span>
+
+    <span style='color:#696969; '>// Ask user to only enter in numbers</span>
+    window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>alert</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Please only enter in numbers!</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800080; '>}</span> <span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span>x <span style='color:#808030; '>!=</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span>
+
+<span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>x <span style='color:#808030; '>!=</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>)</span>
+    window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>alert</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>You gave up!</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>else</span>
+    window<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>alert</span><span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>Correct answer!</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+</pre>
                     </li>
                 </div>
             </div>
