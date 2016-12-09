@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ACE in Action</title>
+<title>Editor</title>
     <script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css" media="screen">
 
@@ -32,46 +32,34 @@
 </style>
 </head>
 <body>
+    
+    <pre id="editor"></pre>
+    <button id="btn" onclick="showHTMLInIFrame()">Click to run the code</button>
+    <div id="preview"></div>
+    
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/html");
+        editor.setFontSize(15);
+        document.getElementById("btn").click();
+
+        function showHTML() {
+            document.getElementById("editor").innerHTML = editor.getValue();
+        }
 
 
-
-
-<pre id="editor"></pre>
-
-<button id="btn" onclick="runCode()">Click to run the code</button>
-<div id="preview"></div>
-
-
-<script>
-
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/html");
-    editor.setFontSize(15);
-    document.getElementById("btn").click();
-
-    function showHTML() {
-        document.getElementById("editor").innerHTML = editor.getValue();
-    }
-
-
-    function showHTMLInIFrame() {
-        document.getElementById("preview").innerHTML = "<iframe src=" +
-                "data:text/html," + encodeURIComponent(editor.getValue()) + "></iframe>";
-    }
-
+        function showHTMLInIFrame() {
+            document.getElementById("preview").innerHTML = "<iframe src=" +
+                    "data:text/html," + encodeURIComponent(editor.getValue()) + "></iframe>";
+        }
+/*
         function runCode() {
-
-        editor.focus();
-        editor.on("focus",showHTMLInIFrame);
-
-
-    }
-
-
-
-
-</script>
+            editor.focus();
+            editor.on("focus",showHTMLInIFrame);
+        }*/
+    </script>
+    
 </body>
 </html>
 
