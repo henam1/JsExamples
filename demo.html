@@ -2,28 +2,76 @@
 <html lang="en">
 <head>
 <title>ACE in Action</title>
-<style type="text/css" media="screen">
-    #editor { 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+    <script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css" media="screen">
+
+  html,
+  body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+  }
+
+  #editor,
+        #preview {
+            width: 100%;
+            height: 45.75%;
+            margin:10px;
+        }
+
+  iframe {
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+      height: 100%;
+      top: -5px;
+      border: 0;
+  }
+
 </style>
 </head>
 <body>
 
-<div id="editor">function foo(items) {
-    var x = "All this is syntax highlighted";
-    return x;
-}</div>
-    
-<script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<pre id="editor"></pre>
+
+<button id="btn" onclick="runCode()">Click to run the code</button>
+<div id="preview"></div>
+
+
 <script>
+
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/javascript");
+    editor.session.setMode("ace/mode/html");
+    editor.setFontSize(15);
+    document.getElementById("btn").click();
+
+    function showHTML() {
+        document.getElementById("editor").innerHTML = editor.getValue();
+    }
+
+
+    function showHTMLInIFrame() {
+        document.getElementById("preview").innerHTML = "<iframe src=" +
+                "data:text/html," + encodeURIComponent(editor.getValue()) + "></iframe>";
+    }
+
+        function runCode() {
+
+        editor.focus();
+        editor.on("focus",showHTMLInIFrame);
+
+
+    }
+
+
+
+
 </script>
 </body>
 </html>
+
