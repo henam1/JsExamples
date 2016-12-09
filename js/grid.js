@@ -351,13 +351,15 @@ var Grid = (function() {
 			this.$href = $( '<a href="#">Visit website</a>' );
 			this.$code = $('<div></div>' );
 			this.$code2 = $('<div></div>' );
-			
             this.$code3 = $('<div></div>');
             this.$button = $('<a href="demo.html" class="btn btn-info" role="button">Demo</a>');
+            this.$title_html = $( '<h4>HTML</h4>' );
+            this.$title_css = $( '<h4>CSS</h4>' );
+            this.$title_js = $( '<h4>JavaScript</h4>' );
 			
 			
 			//removed this.$href fdom function below to remove the link.
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title,this.$description,this.$code,this.$code2, this.$code3, this.$button);
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title,this.$description,this.$title_html,this.$code,this.$title_css,this.$code2,this.$title_js, this.$code3, this.$button);
 			
 			
 			
@@ -401,7 +403,10 @@ var Grid = (function() {
 					code : $itemEl.data('code'),
 				    code2 : $itemEl.data('code2'),
                     code3 : $itemEl.data('code3'),
-                    button : $itemEl.attr('href')
+                    button : $itemEl.attr('href'),
+                    title_html : $itemEl.data('title_html'),
+                    title_css : $itemEl.data('title_css'),
+                    title_js : $itemEl.data('title_js')
 					
 				};
 
@@ -411,6 +416,9 @@ var Grid = (function() {
 			this.$code2.html(eldata.code2);
 			this.$code3.html(eldata.code3);
             this.$button.attr('href', eldata.button);
+            this.$title_html.html(eldata.title_html);
+            this.$title_css.html(eldata.title_css);
+            this.$title_js.html(eldata.title_js);
             
 			this.$href.attr( 'href', eldata.href );
 

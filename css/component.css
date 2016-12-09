@@ -153,10 +153,19 @@
     width: 90%;
 	height: 130px;
     margin: 10px;
-	
+	clear: both;
 	overflow:auto;
 }
 
+.og-details h4 {
+    float:left;
+	clear: both;
+}
+
+.og-details .btn {
+    float:left;
+	clear: both;
+}
 
 .og-details a {
 	font-weight: 700;
