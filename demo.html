@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Editor</title>
+
+<title>Run the code</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="description" content="JavaScript Examples" />
+    <meta name="keywords" content="javascript, js, tutorials, learning" />
+
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Include bootstrap and stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Include scripts (jQuery, FontAwesome, Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/6c6edcf538.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css" media="screen">
 
@@ -14,11 +35,17 @@
   }
 
   #editor,
-        #preview {
-            width: 100%;
-            height: 45.75%;
-            margin:10px;
+  #preview {
+      width: 99%;
+      height: 45.75%;
+      margin:10px;
+
+
         }
+
+  #btn{
+      margin: 10px;
+  }
 
   iframe {
       position: relative;
@@ -29,12 +56,13 @@
       border: 0;
   }
 
+
 </style>
 </head>
 <body>
     
     <pre id="editor"></pre>
-    <button id="btn" onclick="showHTMLInIFrame()">Click to run the code</button>
+    <button class="btn btn-primary" id="btn" onclick="showHTMLInIFrame()">Click to run the code</button>
     <div id="preview"></div>
     
     <script>
@@ -53,13 +81,8 @@
             document.getElementById("preview").innerHTML = "<iframe src=" +
                     "data:text/html," + encodeURIComponent(editor.getValue()) + "></iframe>";
         }
-/*
-        function runCode() {
-            editor.focus();
-            editor.on("focus",showHTMLInIFrame);
-        }*/
     </script>
-    
+
 </body>
 </html>
 
