@@ -62,41 +62,41 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-4">
 							<div class="img">
-								<a data-toggle="modal" data-target="#progress-bar">
-									<img src="images/thumbs/1.jpg" alt="Demo 1" class="img-thumbnail"/>
-									<p>Progress bar</p>
-									<span class="text-content"><span>This is an example</span></span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-md-3 col-sm-4">
-							<div class="img">
-								<a data-toggle="modal" data-target="#battery-charging">
-									<img src="images/thumbs/1.jpg" alt="Demo 2" class="img-thumbnail"/>
-									<p>Battery charging</p>
-									<span class="text-content"><span>This is an another example</span></span>
-								</a>
-							</div>
-						</div>
-
-
-						<div class="col-md-3 col-sm-4">
-							<div class="img">
-								<a data-toggle="modal" data-target="#modal-box">
-									<img src="images/thumbs/1.jpg" alt="Demo 3" class="img-thumbnail"/>
+								<a data-toggle="modal" data-target="#modal_box">
+									<img src="images/thumbs/1.jpg" alt="modal-box" class="img-thumbnail"/>
 									<p>Modal box</p>
-									<span class="text-content"><span>This is the third example</span></span>
+									<span class="text-content"><span>This is modal box</span></span>
 								</a>
 							</div>
 						</div>
 
 						<div class="col-md-3 col-sm-4">
 							<div class="img">
-								<a data-toggle="modal" data-target="#modal-image">
-									<img src="images/thumbs/1.jpg" alt="Demo 3" class="img-thumbnail"/>
+								<a data-toggle="modal" data-target="#modal_image">
+									<img src="images/thumbs/1.jpg" alt="modal-image" class="img-thumbnail"/>
 									<p>Modal image</p>
-									<span class="text-content"><span>This is the fourth example</span></span>
+									<span class="text-content"><span>Modal image</span></span>
+								</a>
+							</div>
+						</div>
+
+
+						<div class="col-md-3 col-sm-4">
+							<div class="img">
+								<a data-toggle="modal" data-target="#animations">
+									<img src="images/thumbs/1.jpg" alt="Animations" class="img-thumbnail"/>
+									<p>Animations</p>
+									<span class="text-content"><span>Animations</span></span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-4">
+							<div class="img">
+								<a data-toggle="modal" data-target="#Google_maps">
+									<img src="images/thumbs/1.jpg" alt="Google_maps" class="img-thumbnail"/>
+									<p>Google maps</p>
+									<span class="text-content"><span>Google maps</span></span>
 								</a>
 							</div>
 						</div>
@@ -188,8 +188,8 @@
 
 				<!-- Large modal -->
 
-
-				<div class="modal fade bd-example-modal-lg" id="progress-bar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<!--example1-->
+				<div class="modal fade bd-example-modal-lg" id="modal_box" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -200,83 +200,102 @@
 							</div>
 							<div class="modal-body">
 
-								<p>This is description. You can learn the example by learning the code and try out the code.</p>
-
+								<p>A modal is a dialog box/popup window that is displayed on top of the current page.</p>
+                                <iframe width="100%" height="300" src="https://jsfiddle.net/groupchina/fgeufp14/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 							</div>  <!--modal body-->
 							<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-										<a class="btn btn-primary" onClick="storeData();" href="demo.html">Try it out</a>
 								</div>
 						</div><!--modal content-->
 					</div> <!--modal large-->
 				</div> <!--modal fade-->
-				<div class="modal fade bd-example-modal-lg" id="battery-charging" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <!--example1-->
+    <!--example2-->
+				<div class="modal fade bd-example-modal-lg" id="modal_image" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h3 class="modal-title" id="battery-charging-title">Battery charging</h3>
+								<h3 class="modal-title">Modal image</h3>
 							</div>
 							<div class="modal-body">
 
-								<p>This is description. You can learn the example by learning the code and try out the code.</p>
-
+								<p>A modal is a dialog box/popup window that is displayed on top of the current page.</p>
+                                  <p>This example use most of the code from the previous example, Modal Boxes, only in this example, we use images.</p>
+                                <iframe width="100%" height="300" src="https://jsfiddle.net/groupchina/t20nq7hy/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 							</div>  <!--modal body-->
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<a class="btn btn-primary" href="demo.html">Try it out</a>
 							</div>
 						</div><!--modal content-->
 					</div> <!--modal large-->
 				</div> <!--modal fade-->
-
-				<div class="modal fade bd-example-modal-lg" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<!--example2-->
+    <!--example3-->
+				<div class="modal fade bd-example-modal-lg" id="animations" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h3 class="modal-title" id="modal-box-title">Modal box</h3>
+								<h3 class="modal-title">Animations</h3>
 							</div>
 							<div class="modal-body">
 
-								<p>This is description. You can learn the example by learning the code and try out the code.</p>
+								<p>JavaScript animations are done by programming gradual changes in an element's style.
 
+                                    The changes are called by a timer. When the timer interval is small, the animation looks continuous.
+
+                                </p>
+                                <iframe width="100%" height="300" src="https://jsfiddle.net/groupchina/gxuqeqxq/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 							</div>  <!--modal body-->
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<a class="btn btn-primary" href="demo.html">Try it out</a>
 							</div>
 						</div><!--modal content-->
 					</div> <!--modal large-->
 				</div> <!--modal fade-->
+<!--example3-->
+    <!--example4-->
 
-
-				<div class="modal fade bd-example-modal-lg" id="modal-image" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal fade bd-example-modal-lg" id="Google_maps" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h3 class="modal-title" id="modal-image-title">Modal image</h3>
+								<h3 class="modal-title">Google maps</h3>
 							</div>
 							<div class="modal-body">
+                                <p>The functionality of the map is provided by a JavaScript library located at Google.</p>
 
-								<p>This is description. You can learn the example by learning the code and try out the code.</p>
+								<p>The <b>mapCanvas</b> variable is the map's HTML element.</p>
+
+                                <p>The <b>mapOptions</b> variable defines the properties for the map.</p>
+
+                                <p>The <b>center</b> property specifies where to center the map (using latitude and longitude coordinates).</p>
+
+                                <p>The <b>zoom</b> property specifies the zoom level for the map (try to experiment with the zoom level).</p>
+
+                                <p>The <b>google.maps.Map</b> object is created with mapCanvas and mapOptions as parameters.</p>
+                                <iframe width="100%" height="300" src="https://jsfiddle.net/groupchina/c2mcfpad/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 							</div>  <!--modal body-->
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<a class="btn btn-primary" href="demo.html">Try it out</a>
+
 							</div>
 						</div><!--modal content-->
 					</div> <!--modal large-->
 				</div> <!--modal fade-->
+<!--example4-->
+
 
 				<div class="modal fade bd-example-modal-lg" id="progressbar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
@@ -494,6 +513,7 @@
                     </div>
                     <div class="modal-body">
                         <p>This is description. You can learn the example by learning the code and try out the code.</p>
+
                         
                         <iframe
                                 style="width: 100%; height: 300px"
@@ -502,6 +522,7 @@
                                 src="https://jsfiddle.net/henam/3afgwqLz/embedded/">
                         </iframe>
          
+
                     </div>  <!--modal body-->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
