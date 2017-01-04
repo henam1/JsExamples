@@ -148,7 +148,7 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="img">
                                 <a data-toggle="modal" data-target="#nine">
-                                    <img src="images/thumbs/1.jpg" alt="Demo 3" class="img-thumbnail"/>
+                                    <img src="images/thumbs/basics/dropdown.png" alt="Demo 3" class="img-thumbnail"/>
                                     <p>Dropdown</p>
                                     <span class="text-content"><span>This is the ninth example</span></span>
                                 </a>
@@ -157,7 +157,7 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="img">
                                 <a data-toggle="modal" data-target="#ten">
-                                    <img src="images/thumbs/1.jpg" alt="Demo 3" class="img-thumbnail"/>
+                                    <img src="images/thumbs/basics/popup.jpg" alt="Demo 3" class="img-thumbnail"/>
                                     <p>Pop up</p>
                                     <span class="text-content"><span>This is the tenth example</span></span>
                                 </a>
@@ -166,7 +166,7 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="img">
                                 <a data-toggle="modal" data-target="#eleven">
-                                    <img src="images/thumbs/1.jpg" alt="Demo 3" class="img-thumbnail"/>
+                                    <img src="images/thumbs/basics/toggle.jpg" alt="Demo 3" class="img-thumbnail"/>
                                     <p>Toggle show/hide</p>
                                     <span class="text-content"><span>This is the eleventh example</span></span>
                                 </a>
@@ -175,7 +175,7 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="img">
                                 <a data-toggle="modal" data-target="#twelve">
-                                    <img src="images/thumbs/1.jpg" alt="Demo 3" class="img-thumbnail"/>
+                                    <img src="images/thumbs/basics/battery.jpg" alt="Demo 3" class="img-thumbnail"/>
                                     <p>Simple animation</p>
                                     <span class="text-content"><span>This is the twelvth example</span></span>
                                 </a>
@@ -429,7 +429,8 @@
                         <p>Adding the function "myFunction()" makes it possible to toggle between hiding and showing the dropdown list.</p>
                         <p>document.getElementById() gets a reference to the element which is going to be toggled. (in this case, the dropdown button).</p>
                         <p>classList.toggle("show") toggles so that the list will show up or close when the button is clicked on.</p>
-                        <p>window.onClick adds an onClick on "outside" of the dropdown, which is used for closing the dropdown. in the event of and outside click, </p>
+                        <p>window.onClick adds an onClick on "outside" of the dropdown, which is used for closing the dropdown. In the event of and outside click, the if statement, checks if the button is targeted or not. If not then it removes the different elements in the dropdown list, one by one in a For loop. Seen in if the code: if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');</p>
                         
                         
                     </div>  <!--modal body-->
@@ -452,7 +453,7 @@
                         <h3 class="modal-title" id="accordion-title">Pop up</h3>
                     </div>
                     <div class="modal-body">
-                        <p>This is description. You can learn the example by learning the code and try out the code.</p>
+                        <p>An easy but useful pop-up done with very little code.</p>
                         
                         <iframe
                                 style="width: 100%; height: 300px"
@@ -460,6 +461,9 @@
                                 allowfullscren="allowfullscreen"
                                 src="https://jsfiddle.net/henam/6z2z32ro/embedded/">
                         </iframe>
+                        
+                        <h4>Explanation of JavaScript code:</h4>
+                        <p>The "myFunction()" only does one thing. It get's the element (the popup) with var popup = document.getElementById('myPopup') and then toggles it with popup.classList.toggle('show')</p>
                         
                     </div>  <!--modal body-->
                     <div class="modal-footer">
@@ -481,7 +485,7 @@
                         <h3 class="modal-title" id="windowOnclick">Toggle Show/Hide</h3>
                     </div>
                     <div class="modal-body">
-                        <p>This is description. You can learn the example by learning the code and try out the code.</p>
+                        <p>Toggle between hiding and showing an element with JavaScript.</p>
                         
                         <iframe
                                 style="width: 100%; height: 300px"
@@ -489,6 +493,9 @@
                                 allowfullscren="allowfullscreen"
                                 src="https://jsfiddle.net/henam/Lc58e1Lb/1/embedded/">
                         </iframe>
+                        
+                        <h4>Explanation of JavaScript code:</h4>
+                        <p>In the "myFunction()" function, get the element (div) by id and put it in a variable. With the help of an if statement, check if the div is shown (block) or not (none). toggle it by setting the display to the opposite. "myFunction()" is run on click.</p>
                         
                     </div>  <!--modal body-->
                     <div class="modal-footer">
@@ -507,10 +514,10 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h3 class="modal-title" id="accordion-title">Accordion</h3>
+                        <h3 class="modal-title" id="accordion-title">Simple animation</h3>
                     </div>
                     <div class="modal-body">
-                        <p>This is description. You can learn the example by learning the code and try out the code.</p>
+                        <p>Learn how to use icons to make an animated effect.</p>
                         
                         <iframe
                                 style="width: 100%; height: 300px"
@@ -518,6 +525,12 @@
                                 allowfullscren="allowfullscreen"
                                 src="https://jsfiddle.net/henam/qLjb8gud/embedded/">
                         </iframe>
+                        
+                        <h4>Explanation of JavaScript code:</h4>
+                        <p>The example gives an impression of a battery getting charged, but instead it is five different icons being displayed. A function called chargebattery() does all the replacing and displaying of icons. The function starts by displaying an empty battery icon, after one second, the icon is replaced by a new icon. The icon is replaced by a new icon each second, until "the battery is fully charged". This process is repeated every 5 second, making it seems like the battery is charging.</p>
+                        <p>For every second a new icon is being replaced in the function. setTimeout(function () {
+    a.innerHTML = "& #xf243;";
+  }, 1000); means that you set the html to an icon "& #xf243;" which is 1/5th filled at 1000ms.</p>
 
                     </div>  <!--modal body-->
                     <div class="modal-footer">
