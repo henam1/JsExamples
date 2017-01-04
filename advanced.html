@@ -196,6 +196,12 @@
                     <div class="modal-body">
                         <p>A slideshow is used to cycle through elements.</p>
                         <iframe width="100%" height="300" src="https://jsfiddle.net/groupchina/gwLhz4pn/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <h4>Explanations of Javascript code</h4>
+                        <h5>showSlide</h5>
+                        <p>Create a variable by using <code>document.getElementsByClassName("mySlides")</code> and use the same way to get “dots” from the html code.</p>
+                        <p>If the parameter “n” is larger than the slide length, set the slideIndex to 1 and show the first slide.</p>
+
+                        <p>The <b>for</b> loop hides (<code>display="none”</code>) all elements with the class name "mySlides", and displays (<code>display="block”</code>) the element with the given slideIndex. </p>
 
                     </div>  <!--modal body-->
                     <div class="modal-footer">
@@ -218,6 +224,27 @@
                     <div class="modal-body">
                         <p>This is description. You can learn the example by learning the code and try out the code.</p>
                         <iframe width="100%" height="300" src="//jsfiddle.net/groupchina/dz8cw8bk/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <h4>Explanations of Javascript code</h4>
+                        <h5>setCookie</h5>
+                        <p>The parameters of the function above are the name of the cookie (cname), the value of the cookie (cvalue), and the number of days until the cookie should expire (exdays).</p>
+                        <p>The function sets a cookie by adding together the cookiename, the cookie value, and the expires string.</p>
+                        <h5>getCookie</h5>
+                        <ul><li>Take the cookiename as parameter (cname).</li>
+                           <li>Create a variable (name) with the text to search for (cname + "=").Decode the cookie string, to handle cookies with special characters, e.g. '$'</li>
+
+                           <li>Split document.cookie on semicolons into an array called ca (ca = decodedCookie.split(';')).</li>
+
+                            <li>Loop through the ca array (i = 0; i < ca.length; i++), and read out each value c = ca[i]).</li>
+
+                           <li>If the cookie is found (c.indexOf(name) == 0), return the value of the cookie (c.substring(name.length, c.length).</li>
+
+                            <li>If the cookie is not found, return "".</li></ul>
+                        <h5>checkCookie</h5>
+                            <p>Last, we create the function that checks if a cookie is set.</p>
+
+                            <p>If the cookie is set it will display a greeting.</p>
+
+                            <p>If the cookie is not set, it will display a prompt box, asking for the name of the user, and stores the username cookie for 365 days, by calling the setCookie function:</p>
                     </div>  <!--modal body-->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
