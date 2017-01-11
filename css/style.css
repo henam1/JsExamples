@@ -52,21 +52,6 @@ width: 800px;
 
 
 /* Header */
-header#mainHeader{
-    
-}
-
-/*--header--*/
-
-/* Navigation */
-
-nav#horzNav{
-    
-}
-
-/* Vertical Navigation */
-
-
 
 
 /* Toggle Styles */
@@ -209,6 +194,10 @@ footer#footer1 {
     height: 45px;
     line-height: 45px; /* Vertically center the text there */
     background-color: #f5f5f5;
+}
+
+.main{
+    padding-top: 20px;
 }
 
 /*hove effect*/
