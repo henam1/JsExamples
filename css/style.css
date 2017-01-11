@@ -200,6 +200,10 @@ footer#footer1 {
     padding-top: 20px;
 }
 
+ul.nav.nav-sidebar{
+    padding-top: 30px;
+}
+
 /*hove effect*/
 div.img-list {
     list-style-type: none;
