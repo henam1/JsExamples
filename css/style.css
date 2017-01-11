@@ -16,6 +16,14 @@ li{
      color:#009688;
  }
 
+li h3{
+    color:#009688;
+}
+
+li h4{
+    color:#009688;
+}
+
 .list-conditional{
     list-style: decimal;
 }
