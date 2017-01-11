@@ -33,11 +33,10 @@
     
     <body>
     <!--Horizontal navigation-->
-        <nav class ="navbar navbar-default navbar-static-top navtop" style="background-color: #e3f2fd; margin-bottom: 0;">
-            <div class="container-fluid">
+        <nav class ="navbar" style="margin-bottom: 0;">
+            <div class="container-fluid" style="background-color: #009688">
                 <div class="navbar-header">
                     <a href="index.html" class="navbar-brand">JavaScript Examples</a>
-                    
                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -47,10 +46,10 @@
                         
                     <div class="collapse navbar-collapse navHeaderCollapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="basics.html">Basics</a></li>
-                            <li><a href="intermediate.html">Intermediate</a></li>
-                            <li><a href="advanced.html">Advanced</a></li>
+                            <li class="active"><a class="navbar-button" href="index.html">Home</a></li>
+                            <li><a href="basics.html" class="navbar-button">Basics</a></li>
+                            <li><a href="intermediate.html" class="navbar-button">Intermediate</a></li>
+                            <li><a href="advanced.html" class="navbar-button">Advanced</a></li>
                         </ul>                               
                     </div>
             </div>
@@ -59,19 +58,19 @@
 <!--Vertical navigation-->
     <div id="sidebar-wrapper">
          <ul class="nav nav-sidebar">
-              <li><a href="index.html">Introduction</a></li>
-              <li><a href="home/FAQ.html">FAQ</a></li>
-              <li><a href="home/Variables.html">Variables</a></li>
-              <li><a href="home/Math.html">Math</a></li>
-              <li><a href="home/Conditionals%20and%20Loops.html">Conditionals and Loops</a></li>
-              <li><a href="home/Arrays.html">Arrays</a></li>
-              <li><a href="home/Functions.html">Functions</a></li>
-              <li><a href="home/Objects.html">Objects</a></li>
-              <li><a href="home/Methods.html">Methods</a></li>
-              <li><a href="home/Object%20Oriented%20JavaScript.html">Object Oriented JavaScript</a></li>
-              <li><a href="home/Events.html">Events</a></li>
-              <li><a href="home/Dates.html">Dates</a></li>
-              <li><a href="home/Libraries%20and%20Frameworks.html">Libraries and Frameworks</a></li>
+              <li><a href="index.html" style="color: #00897B">Introduction</a></li>
+              <li><a href="home/FAQ.html" style="color: #00897B">FAQ</a></li>
+              <li><a href="home/Variables.html" style="color: #00897B">Variables</a></li>
+              <li><a href="home/Math.html" style="color: #00897B">Math</a></li>
+              <li><a href="home/Conditionals%20and%20Loops.html" style="color: #00897B">Conditionals and Loops</a></li>
+              <li><a href="home/Arrays.html" style="color: #00897B">Arrays</a></li>
+              <li><a href="home/Functions.html" style="color: #00897B">Functions</a></li>
+              <li><a href="home/Objects.html" style="color: #00897B">Objects</a></li>
+              <li><a href="home/Methods.html" style="color: #00897B">Methods</a></li>
+              <li><a href="home/Object%20Oriented%20JavaScript.html" style="color: #00897B">Object Oriented JavaScript</a></li>
+              <li><a href="home/Events.html" style="color: #00897B">Events</a></li>
+              <li><a href="home/Dates.html" style="color: #00897B">Dates</a></li>
+              <li><a href="home/Libraries%20and%20Frameworks.html" style="color: #00897B">Libraries and Frameworks</a></li>
          </ul>
     </div>
 
@@ -79,7 +78,7 @@
     
 <!--Wrapper-->
 
-    <div id="wrapper" >
+    <div id="wrapper">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <!--Header-->
              <header id="mainHeader">
@@ -94,18 +93,18 @@
 	        <div class="container-fluid"; >
                 <div class="row";>
                     <div class="col-md-11";>
-                       <li><h3 style="text-overflow: ellipsis";> What is JavaScript and what can it be used for?</h3></li>
+                       <li><h3 class="green-color" style="text-overflow: ellipsis;"> What is JavaScript and what can it be used for?</h3></li>
                          <li><p>JavaScript is a cross-platform programming language that runs in a host environment like a Web browser.
 			        The majority of websites use JavaScript and all Web browsers support JavaScript without any need of plug-ins.
 			        JavaScript is used to make a website interactive, one example are polls that can be found on many websites
                          </p></li>
 
-                        <li> <h3>Do I need to know how to program JavaScript to be able to use it on my website?</h3></li>
+                        <li> <h3 class="green-color">Do I need to know how to program JavaScript to be able to use it on my website?</h3></li>
 			            <li><p>No, you do not have to know how to program JavaScript to be able to use some cool scripts to use for your website.
                         On this page you will find some examples that you can use straight away and implement straight into your website.
 			             </p></li>
 
-                        <li><h3>What is JavaScript? Is it the same as Java?</h3></li>
+                        <li><h3 class="green-color">What is JavaScript? Is it the same as Java?</h3></li>
                         <li>
                             <p>JavaScript is NOT Java. JavaScript is a basic scripting language that allows Web authors to create dynamic pages that react to user interaction.</p>
                             <p>JavaScript is based loosely on the Java programming language. JavaScript programs are contained within the HTML code of the Web page and are interpreted by the browser as it its read in contrast to Java programs that are downloaded separately from the HTML page. JavaScript is a "safe" programming language, one that cannot access any system controls or hardware on a user's computer.</p>
@@ -126,8 +125,8 @@
         <footer id="footer1">
             <div class="container">
                 <span class="text-muted">
-                    <p>© 2016 Project in interaction design.
-                        All Rights Reserved | Designed by Alexander Chau Nguyen, Azer Vilic & Menghan Xu</p>
+                  <div> <p>© 2016 Project in interaction design. All Rights Reserved </p></div>
+                   <p>Designed by Alexander Chau Nguyen, Azer Vilic & Menghan Xu</p>
                 </span>
             </div>
         </footer>
