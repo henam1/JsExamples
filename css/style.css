@@ -8,6 +8,15 @@ body{
     overflow-x: hidden;
 }
 
+.navbar .navbar-nav > li a:hover{
+background: #80CBC4; !important;
+color:black;
+
+}
+.navbar-nav-button{
+color:black;
+background-color:#80CBC4;
+}
 
 li{
     list-style: none;
