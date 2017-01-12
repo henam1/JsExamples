@@ -198,6 +198,11 @@ nav#horzNav{
     background: none;
 }
 
+.img > a p{
+    color: #009688;
+    text-align: center;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 200px;
