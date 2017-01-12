@@ -95,13 +95,9 @@ nav#horzNav{
 }
 /* Vertical Navigation */
 
-.navbar-button li a:hover{
-    text-decoration: none;
-    color: #000;
-    background: black;
-}
-
-
+.navbar .navbar-nav > li a:hover{
+     background: #80CBC4; !important;
+ }
 
 
 /* Toggle Styles */
